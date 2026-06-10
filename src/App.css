@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+:root {
+  --red: #B22234;
+  --blue: #3C3B6E;
+  --white: #FFFFFF;
+  --light-blue: #4A90D9;
+  --dark: #1a1a2e;
+  --gray: #f5f5f5;
+  --text-dark: #1a1a2e;
+  --text-mid: #444;
+  --shadow: 0 4px 24px rgba(0,0,0,0.12);
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: #F5C518;
+  color: var(--dark);
+  border: none;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Source Sans 3', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background: #e6b800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 197, 24, 0.4);
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-back {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.6);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.btn-back:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* LOADING */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ERROR */
+.error-message {
+  background: rgba(178, 34, 52, 0.15);
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* FADE IN */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Admin portal icon */
+.admin-portal-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s;
+}
+
+.admin-portal-icon:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+}

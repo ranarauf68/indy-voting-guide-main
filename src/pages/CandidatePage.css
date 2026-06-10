@@ -1,0 +1,203 @@
+.candidate-page {
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+}
+
+.candidate-page-header {
+  position: relative;
+  padding: 20px 24px 36px;
+}
+
+.candidate-page-back {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+.candidate-page-back:hover { background: rgba(255,255,255,0.35); }
+
+.candidate-page-hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.candidate-page-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 3px solid rgba(255,255,255,0.4);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  flex-shrink: 0;
+}
+
+.candidate-page-eyebrow {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 8px;
+}
+
+.candidate-page-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 4vw, 36px);
+  color: white;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.candidate-page-party {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 4px;
+}
+
+.candidate-page-role {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 4px;
+}
+
+.candidate-page-race {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+
+/* Links */
+.candidate-page-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px 24px;
+  background: white;
+  border-bottom: 1px solid #e8eaed;
+  max-width: 100%;
+}
+
+.candidate-page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: opacity 0.15s;
+}
+.candidate-page-link:hover { opacity: 0.8; }
+.candidate-page-link--website { background: rgba(60,59,110,0.1); color: #3C3B6E; border-color: rgba(60,59,110,0.2); }
+.candidate-page-link--ballotpedia { background: rgba(0,100,180,0.1); color: #0064B4; border-color: rgba(0,100,180,0.2); }
+.candidate-page-link--opensecrets { background: rgba(0,100,0,0.08); color: #006400; border-color: rgba(0,100,0,0.2); }
+.candidate-page-link--youtube { background: rgba(255,0,0,0.07); color: #cc0000; border-color: rgba(255,0,0,0.2); }
+
+/* Body */
+.candidate-page-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.candidate-page-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+.candidate-page-cats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.candidate-page-cat {
+  padding: 7px 16px;
+  border: 1.5px solid #e8eaed;
+  border-radius: 20px;
+  background: #f4f4f6;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.candidate-page-cat:hover { background: #e8eaed; }
+.candidate-page-cat.active {
+  background: var(--cat-color, #3C3B6E);
+  color: white;
+  border-color: transparent;
+}
+
+.candidate-page-positions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.candidate-page-position {
+  padding: 18px 0;
+  border-bottom: 1px solid #e8eaed;
+}
+.candidate-page-position:last-child { border-bottom: none; }
+
+.candidate-page-position-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.candidate-page-position-text {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.candidate-page-no-positions {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+  font-size: 15px;
+}
+
+.candidate-page-footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 12px;
+  color: #aaa;
+  border-top: 1px solid #e8eaed;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .candidate-page-hero { flex-direction: column; text-align: center; }
+  .candidate-page-photo { width: 80px; height: 80px; font-size: 24px; }
+  .candidate-page-links { padding: 16px; gap: 8px; }
+  .candidate-page-body { padding: 20px 16px; }
+}
